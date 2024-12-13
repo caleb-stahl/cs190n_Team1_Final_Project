@@ -60,7 +60,7 @@ tshark -r file.pcap -T fields -E separator=/t -e frame.time_epoch -e ip.src -e t
     * Throughput: Rate at which data is transmitted over a network (Mbps).
     * Bytes Per Transmission Time: Size of the chunk/ RTT of the chunk
     * In Flight: Number of dropped or missing packets.
-* Second, run the CSV that tshark created, following the instruction in the MarkDown cells of `data_processing.ipynb`m  to extract another CSV file containing the features above.
+* Second, run the CSV that tshark created, following the instruction in the MarkDown cells of `data_processing.ipynb` to extract another CSV file containing the features above.
 * Third and finally, place this CSV file in the `data/test_data/` folder of this repository. 
 
 ### 3. Train/Evaluate the Model
