@@ -66,7 +66,7 @@ tshark -r file.pcap -T fields -E separator=/t -e frame.time_epoch -e ip.src -e t
 ### 3. Train/Evaluate the Model
 * Update the filepaths in `puffer_rf.ipynb` to the path of the puffer data you downloaded.
 * Follow the instructions at the end of `puffer_rf.ipynb` to update the file path for your collected data. 
-* Read through `puffer_rf.ipynb` and run the cells to train the Random Forest Regressor and build a decsiion tree for analyzing the model. 
+* Read through `puffer_rf.ipynb` and run the cells to train the Random Forest Regressor and build a decision tree for analyzing the model. 
 
 ---
 
