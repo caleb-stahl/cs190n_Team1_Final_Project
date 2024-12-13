@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ### Twitch Data
 1. Use [PINOT](https://github.com/pinot) and [netUnicorn](https://github.com/netUnicorn) to capture streaming data (or use the data we captured). Optionally, you can use a tool like WireShark or Tshark to get packet caputures.
-2. PreProcess the data you captured with data (See below)
+2. PreProcess the data you captured with `data_preprocessing.ipynb` file. (See below)
 3. Place the packet captures in the `data/twitch` directory.
 
 ---
