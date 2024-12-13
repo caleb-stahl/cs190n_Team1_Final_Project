@@ -64,13 +64,15 @@ tshark -r file.pcap -T fields -E separator=/t -e frame.time_epoch -e ip.src -e t
 * Third and finally, place this CSV file in the `data/test_data/` folder of this repository. 
 
 ### 3. Train/Evaluate the Model
-
+* Update the filepaths in `puffer_rf.ipynb` to the path of the puffer data you downloaded.
+* Follow the instructions at the end of `puffer_rf.ipynb` to update the file path for your collected data. 
+* Read through `puffer_rf.ipynb` and run the cells to train the Random Forest Regressor and build a decsiion tree for analyzing the model. 
 
 ---
 
 ## Results
 
-Evaluation metrics (e.g., MAE, RMSE) for both datasets are detailed in the final report.
+Check out the `results` folder to view the `puffer_rf.ipynb` file with our results included. These results are analyzed more in our [research](https://www.overleaf.com/read/kdhxkvthnnsx#d9ef1c) paper as well. 
 
 ---
 
