@@ -18,7 +18,7 @@ This repository contains the implementation and evaluation of a predictive model
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/caleb-stahl/Final_Project.git
+git clone https://github.com/caleb-stahl/cs190n_Team1_Final_Project.git
 ```
 
 ### 2. Install Dependencies
@@ -53,12 +53,12 @@ After you have collected the data, the next step is to preprocess it so that we 
 ```bash
 tshark -r file.pcap -T fields -E separator=/t -e frame.time_epoch -e ip.src -e tcp.srcport -e udp.srcport -e ip.dst -e tcp.dstport -e udp.dstport -e ip.len -e ip.hdr_len -e ip.proto -e tcp.flags -e tcp.seq_raw -e tcp.ack_raw -e tcp.hdr_len -e udp.length -e tcp.analysis.retransmission -e tcp.analysis.ack_rtt -e tcp.seq -e tcp.ack >> file.csv
 ```
-  * This command extracts the necesary features from the PCAP which we can further mold to fit the structure of the Puffer Data set. The final features we decided to extract are:
-    * Download Duration: The feature we are trying to predict (seconds). 
-    * Size: The size of the video chunk (bytes)
-    * RTT: Time it takes for a data packet to travel from the sender to the client and then back to the sender (nanoseconds).
+  * This command extracts the necesary features from the PCAP which we can further mold to fit the structure of the Puffer Data set. These are our chosen features and target variable:
+    * Target Variable - Download Duration: The variable we are trying to predict (seconds). 
+    * Size: The size of the video chunk (bytes).
+    * RTT: Time it takes for a data packet to travel from the sender to the client and back (nanoseconds).
     * Throughput: Rate at which data is transmitted over a network (Mbps).
-    * Bytes Per Transmission Time: Size of the chunk/ RTT of the chunk
+    * Bytes Per Transmission Time: Size of the chunk/ RTT of the chunk.
     * In Flight: Number of dropped or missing packets.
 * Second, run the CSV that tshark created, following the instruction in the MarkDown cells of `data_processing.ipynb` to extract another CSV file containing the features above.
 * Third and finally, place this CSV file in the `data/test_data/` folder of this repository. 
@@ -72,7 +72,7 @@ tshark -r file.pcap -T fields -E separator=/t -e frame.time_epoch -e ip.src -e t
 
 ## Results
 
-Check out the `results` folder to view the `puffer_rf.ipynb` file with our results included. These results are analyzed more in our [research](https://www.overleaf.com/read/kdhxkvthnnsx#d9ef1c) paper as well. 
+Check out the `results` folder to view the `puffer_rf.ipynb` file with our results included in the output. These results are analyzed more in our [research](https://www.overleaf.com/read/kdhxkvthnnsx#d9ef1c) paper as well. 
 
 ---
 
